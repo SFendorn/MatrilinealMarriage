@@ -1,0 +1,24 @@
+<Module>
+  <Name value="MatrilinealMarriage"/>
+  <Id value="MatrilinealMarriage"/>
+  <Version value="v1.0.0"/>
+  <SingleplayerModule value="true"/>
+  <MultiplayerModule value="false"/>
+  <DependedModules>
+    <DependedModule DependentVersion="v1.1.2" Id="Native" />
+    <DependedModule DependentVersion="v1.1.2" Id="SandBoxCore" />
+    <DependedModule DependentVersion="v1.1.2" Id="Sandbox" />
+    <DependedModule DependentVersion="v1.1.2" Id="StoryMode" />
+  </DependedModules>
+  <SubModules>
+    <SubModule>
+      <Name value="MatrilinealMarriage"/>
+      <DLLName value="MatrilinealMarriage.dll"/>
+      <SubModuleClassType value="MatrilinealMarriage.MatrilinealMarriage"/>
+      <Tags>
+        <Tag key="DedicatedServerType" value="none" />
+        <Tag key="IsNoRenderModeElement" value="false" />
+      </Tags>
+    </SubModule>
+  </SubModules>
+</Module>
