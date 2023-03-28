@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.Party;
+#if DEBUG
 using TaleWorlds.Library;
+#endif
 
 namespace MatrilinealMarriage
 {
@@ -50,14 +52,18 @@ namespace MatrilinealMarriage
 
             if (matchRequests.PlayerRelative.IsFemale)
             {
-                //InformationManager.DisplayMessage(new InformationMessage("Apply matrilineal marriage between " + hero1.ToString() + " (" + hero1.Clan.ToString() + ") and " + hero2.ToString() + " (" + hero2.Clan.ToString() + ")."));
+#if DEBUG
+                InformationManager.DisplayMessage(new InformationMessage("Apply matrilineal marriage between " + hero1.ToString() + " (" + hero1.Clan.ToString() + ") and " + hero2.ToString() + " (" + hero2.Clan.ToString() + ")."));
+#endif
                 ApplyMarriageAction(hero1, Hero.MainHero.Clan);
                 ApplyMarriageAction(hero2, Hero.MainHero.Clan);
                 RemoveRequest(hero1, hero2);
             }
             else
             {
-                //InformationManager.DisplayMessage(new InformationMessage("Apply matrilineal marriage between " + hero1.ToString() + " (" + hero1.Clan.ToString() + ") and " + hero2.ToString() + " (" + hero2.Clan.ToString() + ")."));
+#if DEBUG
+                InformationManager.DisplayMessage(new InformationMessage("Apply matrilineal marriage between " + hero1.ToString() + " (" + hero1.Clan.ToString() + ") and " + hero2.ToString() + " (" + hero2.Clan.ToString() + ")."));
+#endif
                 ApplyMarriageAction(hero1, matchRequests.OtherClan);
                 ApplyMarriageAction(hero2, matchRequests.OtherClan);
                 RemoveRequest(hero1, hero2);
@@ -73,7 +79,9 @@ namespace MatrilinealMarriage
                 if (hero2.Clan == Hero.MainHero.Clan)
                     marriageRequests.Add(new MarriageModel(hero2, hero1, hero1.Clan));
             }
-            //InformationManager.DisplayMessage(new InformationMessage("Romantic Level changed between " + hero1.ToString() + " (" + hero1.Clan.ToString() + ") and " + hero2.ToString() + " (" + hero2.Clan.ToString() + ") to " + romanceLevel.ToString()));
+#if DEBUG
+            InformationManager.DisplayMessage(new InformationMessage("Romantic Level changed between " + hero1.ToString() + " (" + hero1.Clan.ToString() + ") and " + hero2.ToString() + " (" + hero2.Clan.ToString() + ") to " + romanceLevel.ToString()));
+#endif
         }
 
         public void OnMarriageOffered(Hero hero1, Hero hero2)
