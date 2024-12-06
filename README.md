@@ -1,5 +1,5 @@
 # Matrilineal Marriage
-Matrilineal marriage mod for player family members in Mount &amp; Blade II: Bannerlord
+Matrilineal marriage mod for player family members for Mount &amp; Blade II: Bannerlord
 
 ## Content
 This mod inverts the behavior of male and female player clan member marriages, i.e., male player clan members will leave the player clan to join their wives' clan, and female player clan members will stay in the player clan with their husbands. Some restrictions apply, as it is not possible to make a clan leader join your clan via this mod. Your female clan member will leave the clan if she marries another clan leader. The mod applies to NPCs only and does not affect player character marriages in any way.
